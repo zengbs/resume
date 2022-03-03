@@ -2,7 +2,7 @@
                doublesided,
                paper=a4,
                fontsize=10pt
-              ]{my-resume}
+              ]{resume}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,7 +114,10 @@
     \job{12/2014 - 01/2016}
         {TDK corporation, Singapore}
         {Circuit designer\\surface acoustic wave(SAW) filter}
-        {Additional details for this position. Can be left empty to omit this line}
+        {Additional details for this position. Can be left empty to omit this linei}
+    \job{08/2013 - 08/2014}
+        {Military Service}
+        {}
 
     \section[\faMortarBoard]{Education}
     \job{08/2016 - 06/2022}
@@ -162,36 +165,42 @@
 \makebody
 \clearpage
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End of the first page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagestyle{highlightmain}
+\pagestyle{empty}
 
 % The highlightbar needs to be filled to display mainbar contents correctly in singlesised mode
 % For an empty highlightbar, fill with empty space
-\highlightbar{\hfill}
-\mainbar{
+%\highlightbar{\hfill}
+%\mainbar{
+%    \section{Another section}
+%    This page uses the page style \texttt{highlightmain}
+%    which shows the highlight bar (gray) and the main part (white background)
+%    but omits the header.
+%    The default page style is \texttt{headerhighlightmain} with all three elements.
+%    If you don't want header, nor highlight bar,
+%    use page style \texttt{\textbackslash pagestyle\{empty\}}.
+%    Neither main, nor highlight bar must be filled to make this template work.
+%    It is possible to use a page style with the highlight bar
+%    but leave it empty by setting an empty highlightbar \texttt{\textbackslash highlightbar\{\}}.
+%
+%    \vspace{0.5em}
+%    \subsection{Subsection 1}
+%    Demonstrate subsections.
+%
+%    \subsection{Subsection 2}
+%    Subsection are also bold face but a smaller font then section. They also omit the rule.
+%}
+%\makebody
+%
+%\clearpage
 
-    \section{Another section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End of the second page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    This page uses the page style \texttt{highlightmain} which shows the highlight bar (gray) and the main part (white background) but omits the header.
-    The default page style is \texttt{headerhighlightmain} with all three elements.
-    If you don't want header, nor highlight bar, use page style \texttt{\textbackslash pagestyle\{empty\}}.
-    \medskip
-    Neither main, nor highlight bar must be filled to make this template work.
-    It is possible to use a page style with the highlight bar but leave it empty by setting an empty highlightbar \texttt{\textbackslash highlightbar\{\}}.
-
-    \vspace{0.5em}
-    \subsection{Subsection 1}
-    Demonstrate subsections.
-
-    \subsection{Subsection 2}
-    Subsection are also bold face but a smaller font then section. They also omit the rule.
-
-
-}
-\makebody
-
-
-\clearpage
 \pagestyle{empty}
 
 \section{Publications}
