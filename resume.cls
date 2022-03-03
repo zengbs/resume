@@ -59,7 +59,7 @@
 
 \RequirePackage{silence}
 
-% The page header is deliberately disabled in my-resume, so the warning by scrlayer-scrpage is invalid. 
+% The page header is deliberately disabled in my-resume, so the warning by scrlayer-scrpage is invalid.
 \WarningFilter{scrlayer-scrpage}{Very small head height detected!}
 
 
@@ -199,7 +199,7 @@
       ]{highlightbar.even}
 }
 
-% define the layer for the header 
+% define the layer for the header
 \DeclareNewLayer[
   background,
   topmargin,
@@ -259,7 +259,7 @@
             }{}
             % print the header text
                 \begin{minipage}[t][2em]{\linewidth}
-                    {\Huge\bfseries\color{headerfontcolor}\MakeUppercase{\@name}\par}
+                    {\Huge\bfseries\color{headerfontcolor}\@name\par}
                 \end{minipage}%
                 \vfill%
                 \begin{minipage}[b][\dimexpr \headerheight-2em-\marginbottom]{\linewidth}%
@@ -344,7 +344,7 @@
                 \@mainbar
                 \hspace{\dimexpr \marginleft+\marginright}%
                 \@highlightbar
-            }   
+            }
         }
 }
 

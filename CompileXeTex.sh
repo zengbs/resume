@@ -17,6 +17,11 @@ filename="${filename%.*}"
 #xelatex -shell-escape ${filename}.tex
 #xelatex -shell-escape ${filename}.tex
 
+rm *.aux
+rm *.bbl
+rm *.blg
+rm *.log
+rm *.out
 
 lualatex -shell-escape  ${filename}.tex
 bibtex    ${filename}.aux
