@@ -1,18 +1,22 @@
+
 \documentclass[%singlesided,
                doublesided,
                paper=a4,
                fontsize=10pt
               ]{resume}
 
+\usepackage{emoji}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % set geometry
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setlength\highlightwidth{8cm}
-\setlength\headerheight{4cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+% note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\headerheight{4cm}
 \setlength\marginleft{1cm}
-\setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
+% needs to be 1.5 times to be actually equal. why?
+\setlength\marginright{\marginleft}
 \setlength\margintop{1cm}
 \setlength\marginbottom{1cm}
 
@@ -47,8 +51,16 @@
 \begin{document}
 
 \name{Dr. Po-Hsun Tseng}
-\tagline{Amazing tag line that makes HR managers want to hire you immediately.\\The tag line is aligned with the bottom of the picture to the right, so if you have\\multiple lines it fills the space to your name from the bottom. You might want to\\introduce manual line breaks to make this look nicer then simply filling up the lines.}
-\photo[round]{headshot.jpg}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
+
+\tagline{6+ years experience of large-scale software development
+         with \textbf{C programming}\\ on the \textbf{Linux} system
+         throughout my Ph.D. journey.\\
+         Seeking a challenging and rewarding opportunity with
+         low-level system programming\\ (eg. device driver, Linux kernel, CPU architecture)
+         to apply my skills at a fabless company.}
+
+% make photo exactly match the header with margintop/marginright/marginbottom as margin
+\photo[round]{headshot.jpg}{\dimexpr \headerheight-\marginbottom}
 
 \makeheader
 
@@ -62,17 +74,17 @@
     %\homepage{nicokrieger.com}{https://www.nicokrieger.de}
     \github{https://github.com/zengbs}{https://github.com/zengbs}
     %\linkedin{Nico Krieger}{https://www.linkedin.com/in/nico-krieger-6b28151b2/}
-    \orcid{0000-0002-1868-0660}{https://orcid.org/0000-0002-1868-0660}
+    %\orcid{0000-0002-1868-0660}{https://orcid.org/0000-0002-1868-0660}
     %\ads{NASA/ADS publication list}{https://}}
 
     \section{Skills}
 
     \skillsection{Programming}
     \skill{C}{5}
-    \skill{CUDA}{4}
-    \skill{Bash}{4}
+    \skill{Bash scripting}{5}
     \skill{System programming}{3}
-    \skill{Python}{3}
+    \skill{CUDA}{4}
+    \skill{Python}{5}
 
     \vspace{0.5em}
     \skillsection{Operating System}
@@ -88,18 +100,19 @@
     \skill{Git}{5}
     \skill{Vim}{5}
     \skill{Gdb}{5}
-    \skill{Visualisation}{5}
-    (matplotlib, gnuplot)\\
-    \skill{Data handling/analysis}{4}
-    (hdf5, numpy, scipy)
+    \skill{Valgrind}{5}
+    %\skill{Visualisation}{5}
+    %(matplotlib, gnuplot)\\
+    %\skill{Data handling/analysis}{4}
+    %(hdf5, numpy, scipy)
 
 
     \vspace{0.5em}
     \skillsection{Languages}
     \skill{Chinese (native)}{5}
     \skill{English -- writing}{4}
-    \skill{English -- speaking}{3}
-    \skill{English -- listening}{3}
+    \skill{English -- speaking}{4}
+    \skill{English -- listening}{4}
     \skill{English -- reading}{5}
     \bigskip
 
@@ -147,7 +160,6 @@
     \tag{Large-scale project}
     \tag{cscope}
     \tag{makefile}
-    \tag{valgrind}
     \tag{GNU autotools}
     %\tag{to the next line}
     %\tag{if necessary}
@@ -258,6 +270,7 @@
 \end{itemize}
 \section{References}
 \begin{itemize}
+  \item Please send an appointment letter to request a call. \emoji{smiley}
   \item Dr. Tzihong Chiueh\\
         Distinguished Professor, Institute of Astrophysics, National Taiwan University\\
         \location{Taipei 10617, Taiwan}
