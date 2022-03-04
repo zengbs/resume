@@ -4,7 +4,7 @@
                paper=a4,
                fontsize=10pt
               ]{resume}
-
+\usepackage{hyperref}
 \usepackage{emoji}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,7 +134,14 @@
     \job{08/2016 - 06/2022}
         {National Taiwan University, Taiwan}
         {Ph.D. in Computational Physics}
-
+        {\begin{itemize}
+         \item Developed and implemented a new algorithm to
+               reduce numerical error by a factor of $10^6$ compared to conventional one.
+               See Fig. 16 in \url{https://arxiv.org/abs/2012.11130}.
+         \item Actively collaborated with Dr. Chiueh/Dr. Schive
+               (see the Section \textit{References})
+               to develop the new algorithm.
+         \end{itemize}}
     \section[\faGears]{Work history}
     \job{12/2014 - 01/2016}
         {TDK corporation, Singapore}
@@ -153,8 +160,18 @@
         {National Central University, Taiwan}
         {B.Sc. in Mathematics}
 
-    \section{Achievement}%, honours and awards}
-    \achievement{My first achievement}
+    %\section{Achievement}%, honours and awards}
+    %\achievement{My first achievement}
+
+    \section{Soft skills}
+    \tag{Nonverbal communication}
+    \tag {Active listening}
+    \tag{Open mindedness}
+    \tag{Patience}
+    \tag{Mutual respect}
+    \tag{Teamwork}
+    \tag{Brainstorming}
+    \tag{Collaboration}
 
     \section{General Skills}
     %\smallskip % additional skip because tag outlines use up space
@@ -244,9 +261,11 @@
          and error minimized special relativistic hydrodynamics code} % Title
 	{\textbf{Po-Hsun Tseng}, Hsi-Yu Schive, Tzihong Chiueh} % Authors
 	{2021} % Year
-	{Monthly Notices of the Royal Astronomical Society Vol. 504, pp. 3298-3315} % Journal
-	{\ADS{https://ui.adsabs.harvard.edu/abs/2021MNRAS.504.3298T/abstract},
-         \arXiv{https://arxiv.org/abs/2012.11130}} % ADS & arxiv links
+	{Monthly Notices of the Royal Astronomical Society Vol. 504, pp. 3298-3315\\ % Journal
+        \url{https://arxiv.org/abs/2012.11130}} % ADS & arxiv links
+       {\ADS{https://ui.adsabs.harvard.edu/abs/2021MNRAS.504.3298T/abstract}
+        } % ADS & arxiv links
+
 
 
 \section{Talks}
