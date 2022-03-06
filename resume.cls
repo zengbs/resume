@@ -548,18 +548,15 @@
     % Title
     {\large\color{emphasis}#1\par}
     \vspace{0.1em}%
-    \begin{minipage}[t]{3mm}%
-        \makebox[3mm][c]{\normalsize \faGroup}
-    \end{minipage}%
-    \hspace{1.0em}%
     % Authors
     \begin{minipage}[t]{\pubjournallength}%
-        {\normalsize #2\par}
+        \normalsize \makebox[3mm][c]{\faGroup} \hspace{0.25em} #2 \par
+        %\normalsize #2
     \end{minipage}%
-    \par%
+    \par
     % Journal
     \begin{minipage}[t]{\pubjournallength}%
-        \normalsize \makebox[3mm][c]{\faBook} \hspace{0.25em} #3
+        \normalsize \makebox[3mm][c]{\faBook} \hspace{0.25em} #3 \par
     \end{minipage}%
     \hspace{1.0em}
     \par%
@@ -568,7 +565,7 @@
     {}
     {\makebox[3mm][c]{\faChain} \hspace{0.25em}}
     \begin{minipage}[t]{\pubjournallength}%
-        {\normalsize #4\par}
+        \normalsize #4\par
     \end{minipage}%
     \par%
     \vspace{1.0em}%
