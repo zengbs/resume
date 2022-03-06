@@ -545,47 +545,31 @@
 \pubdefaultspacing
 
 \newcommand{\publication}[5]{%
-    {\normalsize \color{emphasis}#1\par}
+    % Title
+    {\large\color{emphasis}#1\par}
     \vspace{0.1em}%
     \begin{minipage}[t]{3mm}%
-        \makebox[3mm][c]{\footnotesize \faGroup}
+        \makebox[3mm][c]{\normalsize \faGroup}
     \end{minipage}%
-    \hspace{0.5em}%
-    \begin{minipage}[t]{\dimexpr \linewidth-3mm-0.5em}%
-        {\footnotesize #2\par}
+    \hspace{1.0em}%
+    % Authors
+    \begin{minipage}[t]{\pubjournallength}%
+        {\normalsize #2\par}
     \end{minipage}%
     \par%
-    \vspace{0.25em}%
-    \ifstrequal{#4}{}{%
-        \begin{minipage}[t]{\dimexpr \pubdatelength+\pubjournallength-1.0em}%
-            \footnotesize \makebox[3mm][c]{\faCalendar} \hspace{0.25em} #3
-        \end{minipage}%
-    }{%
-        \begin{minipage}[t]{\dimexpr \pubdatelength-1.0em}%
-            \footnotesize \makebox[3mm][c]{\faCalendar} \hspace{0.25em} #3
-        \end{minipage}%
-    }%
-    \hspace{1.0em}
-    \begin{minipage}[t]{\dimexpr \pubjournallength-1.0em}%
-        \ifstrequal{#4}{}{}{%
-            \begin{minipage}[t]{3mm}%
-                \makebox[3mm][c]{\footnotesize \faBook}
-            \end{minipage}%
-            \hspace{0.5em}%
-            \begin{minipage}[t]{\dimexpr \linewidth-3mm-0.25em}%
-                {\footnotesize #4\par}
-            \end{minipage}%
-        }%
+    % Journal
+    \begin{minipage}[t]{\pubjournallength}%
+        \normalsize \makebox[3mm][c]{\faBook} \hspace{0.25em} #3
     \end{minipage}%
     \hspace{1.0em}
-    \begin{minipage}[t]{\publinklength}%
-        \ifstrequal{#5}{}{}{%
-            \footnotesize \makebox[3mm][c]{\faChain} \hspace{0.25em} #5\par
-        }%
+    \par%
+    % Link
+    \begin{minipage}[t]{\pubjournallength}%
+        {\normalsize #4\par}
     \end{minipage}%
-    \par\normalsize
-    \vspace{1.0em}
-}
+    \par%
+    \vspace{1.0em}%
+}%
 
 % achievement
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
