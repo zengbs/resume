@@ -36,7 +36,7 @@
 
 \LoadClass{scrartcl}
 
-
+\hyphenpenalty 10000
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % REQUIRED PACKAGES
@@ -250,24 +250,26 @@
 % assemble the header
 \newcommand{\makeheader}{% header bar is a minipage
     \begin{minipage}[t][\headerheight]{\textwidth}%
-        % \vspace{-1em}
-        \vspace{\dimexpr \@namefontheight-\@namelineheight}                     % align top of name and photo
+        \vspace{-1em}
+        % align top of name and photo align top of name and photo
+        \vspace{\dimexpr \@namefontheight-\@namelineheight}
         % create two minipages for header text and photo if photo is given
         \ifdef{\@photodiameter}{
-            \begin{minipage}[t]{\dimexpr \textwidth-\@photodiameter}        % to top align name and photo add [t] here
+            \begin{minipage}[t]{\dimexpr \textwidth-\@photodiameter}
                 \vspace{0cm}%
             }{}
-            % print the header text
+                % print the header text
                 \begin{minipage}[t][2em]{\linewidth}
                     {\Huge\bfseries\color{headerfontcolor}\@name\par}
                 \end{minipage}%
                 \vfill%
-                \begin{minipage}[b][\dimexpr \headerheight-2em-\marginbottom]{\linewidth}%
-                    {\large\bfseries\color{headerfontcolor}\@tagline\par}
+                \vspace{0.5em}
+                \begin{minipage}[t][\dimexpr \headerheight-2em-\marginbottom]{0.95\linewidth}%
+                    {\Large\bfseries\color{headerfontcolor}\@tagline\par}
                 \end{minipage}%
         % finish the minipages for text and photo if photo is given
         \ifdef{\@photodiameter}{%
-            \end{minipage}\hfil%
+            \end{minipage}\hfill%
             \begin{minipage}[t]{\@photodiameter}                                % to top align name and photo add [t] here
                 \vspace{0cm}
     			% format as square or round
