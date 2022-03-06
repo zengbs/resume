@@ -530,14 +530,14 @@
 % helper function to set spacings that work empirically
 \newcommand{\pubdefaultspacing}{%
     \setlength{\pubdatelength}{0.15\linewidth}
-    \setlength{\pubjournallength}{0.65\linewidth}
+    \setlength{\pubjournallength}{\linewidth}
     \setlength{\publinklength}{0.20\linewidth}
 }
 
 % helper function to force the publication to use the full width in normal page styles without highlight bar or header
 \newcommand{\pubforcefullwidth}{%
     \setlength{\pubdatelength}{0.1\textwidth}
-    \setlength{\pubjournallength}{0.8\textwidth}
+    \setlength{\pubjournallength}{\textwidth}
     \setlength{\publinklength}{0.1\textwidth}
 }
 
@@ -547,10 +547,10 @@
 \newcommand{\publication}[5]{%
     % Title
     \begin{minipage}[t]{\pubjournallength}%
-        \normalsize   #1 \par
+        \large   #1
     \end{minipage}%
     \hspace{1.0em}
-    \par%
+    %\par%
     %{\large\color{emphasis}#1\par}
     %\vspace{0.1em}%
     % Authors
@@ -564,7 +564,7 @@
         \normalsize \makebox[3mm][c]{\faBook} \hspace{0.25em} #3 \par
     \end{minipage}%
     \hspace{1.0em}
-    \par%
+    %\par%
     % Link
     \ifstrequal{#4}{}
     {}
