@@ -546,8 +546,13 @@
 
 \newcommand{\publication}[5]{%
     % Title
-    {\large\color{emphasis}#1\par}
-    \vspace{0.1em}%
+    \begin{minipage}[t]{\pubjournallength}%
+        \normalsize   #1 \par
+    \end{minipage}%
+    \hspace{1.0em}
+    \par%
+    %{\large\color{emphasis}#1\par}
+    %\vspace{0.1em}%
     % Authors
     \begin{minipage}[t]{\pubjournallength}%
         \normalsize \makebox[3mm][c]{\faGroup} \hspace{0.25em} #2 \par
