@@ -373,37 +373,56 @@
 
 % set length of date/place column versus position column in fraction of linewidth before linewidth gets redefined in minipages
 \newlength{\jobdateplacelength}
-\newlength{\jobpositionlength}
-\setlength{\jobdateplacelength}{0.4\linewidth}
-\setlength{\jobpositionlength}{0.6\linewidth}
+%\newlength{\jobpositionlength}
+\setlength{\jobdateplacelength}{\linewidth}
+%\setlength{\jobpositionlength}{0.6\linewidth}
 \newcommand{\job}[4]{%
     \begin{minipage}[t]{\jobdateplacelength}% minipage for left column with date/place
-        \footnotesize
+        \large
+        \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap place in minipage to allow multi-line places
+            #1
+        \end{minipage}%
+        \par
         \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line dates
-            \makebox[3mm][c]{\faCalendar}
+            \makebox[3mm][c]{\faMapMarker}
         \end{minipage}%
         \hspace{0.5em}%
         \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap date in minipage to allow multi-line dates
-            #1
+            #2
+        \end{minipage}%
+        \par
+        \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line places
+            \makebox[3mm][c]{\faCalendar}
+        \end{minipage}%
+        \hspace{0.5em}%
+        \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap place in minipage to allow multi-line places
+            #3
+        \end{minipage}%
+    \end{minipage}%
+    \ifstrequal{#4}{}{}{\par \vspace{0.5em} \small #4}
+    \par\normalsize
+    \vspace{0.0em}
+}
+
+\newcommand{\military}[2]{%
+    \begin{minipage}[t]{\jobdateplacelength}% minipage for left column with date/place
+        \large
+        \vspace{0.4em}
+        \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap date in minipage to allow multi-line dates
+            #2
         \end{minipage}%
         \par
         \vspace{0.1em}
         \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line places
-            \makebox[3mm][c]{\faMapMarker}
+            \makebox[3mm][c]{\faCalendar}
         \end{minipage}%
         \hspace{0.5em}%
         \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap place in minipage to allow multi-line places
-            #2
+            #1
         \end{minipage}%
+        \hspace{0.5em}%
     \end{minipage}%
-    \begin{minipage}[t]{\jobpositionlength}% minipage for position
-        {\large \color{emphasis} #3}
-    \end{minipage}%
-    \ifstrequal{#4}{}{}{\par \vspace{0.1em} \footnotesize #4}
-    \par\normalsize
-    \vspace{0.5em}
 }
-
 
 % skill with 5 dot bar chart
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
