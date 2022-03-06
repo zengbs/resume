@@ -564,6 +564,9 @@
     \hspace{1.0em}
     \par%
     % Link
+    \ifstrequal{#4}{}
+    {}
+    {\makebox[3mm][c]{\faChain} \hspace{0.25em}}
     \begin{minipage}[t]{\pubjournallength}%
         {\normalsize #4\par}
     \end{minipage}%
