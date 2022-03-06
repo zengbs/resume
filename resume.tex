@@ -7,7 +7,7 @@
 \usepackage{hyperref}
 \usepackage{emoji}
 \usepackage{xcolor}
-
+\usepackage{luatexja-zhfonts}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % set geometry
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,8 +51,7 @@
 
 \begin{document}
 
-\name{Dr. Po-Hsun Tseng}
-
+\name{Dr. Po-Hsun Tseng (曾柏勳)}
 \tagline{\textcolor{yellow}{6+} years experience of large-scale software development
          with \textcolor{yellow}{C} programming on the \textcolor{yellow}{Linux} system
          throughout my Ph.D. journey.
@@ -112,10 +111,7 @@
     \vspace{0.5em}
     \skillsection{Languages}
     \skill{Chinese (native)}{5}
-    \skill{English -- writing}{4}
-    \skill{English -- speaking}{3}
-    \skill{English -- listening}{4}
-    \skill{English -- reading}{5}
+    \skill{English}{4}
     \bigskip
 
     %\section{Certificates}
@@ -137,20 +133,26 @@
         {Ph.D. in Computational Physics}
         {National Taiwan University, Taiwan}
         {08/2016 - 06/2022}
+        \normalsize
         {\begin{itemize}
-         \item Developed and implemented a new algorithm to
-               reduce numerical error by $10^6$ compared to conventional one.\\
-               See Fig. 16 in (\textcolor{violet}{\url{https://arxiv.org/abs/2012.11130}}).
-         \item Designed a new approach to further promote the robustness of GAMER.
+         \item Developed a new algorithm in C to
+               reduce numerical error by $10^6$ compared to conventional algorithm.
+               Published in
+               \textit{Monthly Notices of the Royal Astronomical Society}
+               2021 Vol. 504, pp. 3298-3315
+         \item Designed a new approach to further promote the robustness of our
+               program (GAMER) for research.
                The new approach was adopted in the research project led
-               by Dr. Kuo-Chuan Pan from Tsing Hua University.
+               by Dr. Kuo-Chuan Pan from Tsing Hua University.\\
                (\textcolor{violet}{\url{https://github.com/gamer-project/gamer/pull/60}})
-         \item Worked on improving the GAMER collaborated with
+         \item Improved the GAMER collaborated with
                Dr. Tzihong Chiueh and Dr. Hsi-Yu Schive.
                See the Section \textit{References}.
          \item A main contributor of the GAMER.\\
+               \footnotesize
                (\textcolor{violet}
                {\url{https://github.com/gamer-project/gamer/graphs/contributors}})
+         \normalsize
          \item Built NIS, NFS, and Linux cluster from scratch with colleagues
                and worked with Dr. Hsi-Yu Schive to bootstrap simulations for research.
          \end{itemize}}
@@ -159,8 +161,9 @@
         {Circuit designer}
         {TDK corporation, Singapore}
         {01/2015 - 02/2016}
+        \normalsize
         {\begin{itemize}
-           \item Designed the circiut of surface acoustic wave(SAW) filters
+           \item Designed the circiut of surface acoustic wave (SAW) filters
          \end{itemize}
         }
     \military{08/2013 - 08/2014}
@@ -180,15 +183,15 @@
     %\section{Achievement}%, honours and awards}
     %\achievement{My first achievement}
 
-    \section{Soft skills}
-    \tag{Nonverbal communication}
-    \tag {Active listening}
-    \tag{Open mindedness}
-    \tag{Patience}
-    \tag{Mutual respect}
-    \tag{Teamwork}
-    \tag{Brainstorming}
-    \tag{Collaboration}
+    %\section{Soft skills}
+    %\tag{Nonverbal communication}
+    %\tag {Active listening}
+    %\tag{Open mindedness}
+    %\tag{Patience}
+    %\tag{Mutual respect}
+    %\tag{Teamwork}
+    %\tag{Brainstorming}
+    %\tag{Collaboration}
 
     \section{General Skills}
     %\smallskip % additional skip because tag outlines use up space
@@ -279,7 +282,7 @@
          and error minimized special relativistic hydrodynamics code} % Title
 	{\textbf{Po-Hsun Tseng}, Hsi-Yu Schive, Tzihong Chiueh} % Authors
 	{Monthly Notices of the Royal Astronomical Society 2021 Vol. 504, pp. 3298-3315} % Journal
-        {\url{https://arxiv.org/abs/2012.11130}}
+        {\url{https://doi.org/10.1093/mnras/stab1006}}
 
 \publication
 	{[2] The symmetry problem of the Fermi and eROSITA bubbles: A proof-of-concept study}

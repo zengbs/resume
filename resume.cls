@@ -250,7 +250,7 @@
 % assemble the header
 \newcommand{\makeheader}{% header bar is a minipage
     \begin{minipage}[t][\headerheight]{\textwidth}%
-        \vspace{-1em}
+        \vspace{-1.5em}
         % align top of name and photo align top of name and photo
         \vspace{\dimexpr \@namefontheight-\@namelineheight}
         % create two minipages for header text and photo if photo is given
@@ -263,7 +263,7 @@
                     {\Huge\bfseries\color{headerfontcolor}\@name\par}
                 \end{minipage}%
                 \vfill%
-                \vspace{0.5em}
+                \vspace{0.9em}
                 \begin{minipage}[t][\dimexpr \headerheight-2em-\marginbottom]{0.95\linewidth}%
                     {\Large\bfseries\color{headerfontcolor}\@tagline\par}
                 \end{minipage}%
@@ -446,7 +446,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\skillsection}[1]{%
-    \textit{\color{accent}#1}\par
+   \textbf{ \textit{\color{accent}#1}}\par
 }
 
 % tag (framed word or phrase)
