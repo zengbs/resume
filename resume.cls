@@ -573,7 +573,6 @@
         \normalsize #4\par
     \end{minipage}%
     \par%
-    \vspace{1.0em}%
 }%
 
 % achievement

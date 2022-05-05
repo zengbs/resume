@@ -52,12 +52,12 @@
 \begin{document}
 
 \name{Dr. Po-Hsun Tseng (曾柏勳)}
-\tagline{\textcolor{yellow}{6+} years experience of large-scale software development
-         with \textcolor{yellow}{C/CUDA} programming on the \textcolor{yellow}{Linux} system
+\tagline{\textcolor{yellow}{6+} years experience of \textcolor{yellow}{finite-volume method}
+         with \textcolor{yellow}{C/CUDA} programming for \textcolor{yellow}{HPC}
          over my doctoral program.
          Seeking a challenging and rewarding opportunity with
          \textcolor{yellow}{software development}
-         to apply my skills at a fab company.}
+         to apply my skills at a fabless/fab company.}
 
 % make photo exactly match the header with margintop/marginright/marginbottom as margin
 \photo[round]{headshot.jpg}{\dimexpr \headerheight-\marginbottom}
@@ -82,18 +82,14 @@
     \skillsection{Programming}
     \skill{C}{5}
     \skill{Bash scripting}{5}
-    \skill{System programming}{3}
     \skill{CUDA}{4}
+    \skill{OpenMPI}{4}
+    \skill{OpenMP}{4}
     \skill{Python}{5}
 
     \vspace{0.5em}
     \skillsection{Operating System}
     \skill{Linux -- user}{5}
-    \skill{Linux -- kernel}{2}
-
-    \vspace{0.5em}
-    \skillsection{Architecture}
-    \skill{ARM architecture}{2}
 
     \vspace{0.5em}
     \skillsection{Software \& Tools}
@@ -136,19 +132,19 @@
         {\begin{itemize}
          \item Developed a \colorbox{yellow!30}{new algorithm} in \colorbox{yellow!30}{C/CUDA} to
                reduce numerical error by \colorbox{yellow!30}{$10^6$}\
-               compared to conventional algorithm.
+               compared to conventional algorithm in finite-volume method.
                Published in
                \textit{Monthly Notices of the Royal Astronomical Society}
                2021 Vol. 504, pp. 3298-3315
          \item A main contributor of the GAMER,
-               a hybrid \colorbox{yellow!30}{GPU/OpenMPI/OpenMP} program
-               for hydrodynamic simulations.\\
+               a hybrid \colorbox{yellow!30}{GPU/OpenMPI/OpenMP} finite-volume program
+               for \colorbox{yellow!30}{relativistic hydrodynamic simulations}.\\
                \footnotesize
                (\textcolor{violet}
                {\url{https://github.com/gamer-project/gamer/graphs/contributors}})
          \normalsize
-         \item Designed a new approach to further promote the robustness of our
-               program (GAMER) for research.
+         \item Designed a new approach to further promote the robustness of
+               finite-volume program (GAMER) for research.
                The new approach was adopted in the research project led
                by Dr. Kuo-Chuan Pan from Tsing Hua University.\\
                (\textcolor{violet}{\url{https://github.com/gamer-project/gamer/pull/60}})
@@ -226,7 +222,7 @@
 %% End of the first page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagestyle{empty}
+%\pagestyle{empty}
 
 % The highlightbar needs to be filled to display mainbar contents correctly in singlesised mode
 % For an empty highlightbar, fill with empty space
@@ -257,6 +253,41 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% End of the second page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\pagestyle{empty}
+%\section{Biography}
+%\pubforcefullwidth
+%
+%我在博士班期間的兩個成果：\\
+%
+%1. 使用C/CUDA (主要是C) 實作新的數値方法 (模擬相對論性流體), 與傳統方法相比下,
+%   可以壓低數値誤差100萬倍。並已將該方法發表至國際期刊
+%   Monthly Notices of the Royal Astronomical Society 2021 Vol. 504, pp. 3298-3315。
+%
+%--- 當計算流體通量 (flux) 時, 傳統的數値方法總是會在流體於高速低溫的極限下產生數値誤差。
+%我嘗試許多傳統的方法後, 皆無法解決此問題。若不解決, 則無法做後續的研究,
+%更無法畢業。我持續思考兩年後, 看到一篇專門介紹浮點數的文章, 並在 group meeting
+%時分享浮點數的原理給闕志鴻 教授聽, 然而就在隔天, 闕教授請我進他辦公室,
+%告知我傳統的演算法在高速低溫的極限下會失敗的原因可能是：兩個很靠近的浮點數,
+%相減後失去有效位數後的結果。我回去後, 馬上改進實作, 並在數週後成功地將數値誤差減小100萬倍,
+%並解決市面上的工具一直遭遇的問題。
+%若沒有闕教授 (chiuehth@phys.ntu.edu.tw), 我可能無法解決此難題, 我很感謝他。\\
+%
+%
+%2.實作出避免模擬程式 crash 的新方法, 此方法可解決清華大學潘國全 教授
+%(kuochuan.pan@gapp.nthu.edu.tw)團隊遇到的困難。
+%
+%--- 在我的模擬程式中, 若調低一個參數後, 會大幅降低程式 crash 的機會,
+%但也會使模擬結果的「整體性」解析度降低（有一好沒兩好）。我想到, 是否可以調低參數的同時,
+%「局部性」地降低解析度？也就是避免一顆老鼠屎壞一鍋粥。
+%實作後的結果確實可以達成此目的。
+%很幸運地, 此方法可以解決清華大學潘國全 教授(kuochuan.pan@gapp.nthu.edu.tw)
+%團隊遇到的困難, 並被台灣大學 薛熙于教授(hyschive@phys.ntu.edu.tw)
+%合併至該程式的 stable branch (https://github.com/gamer-project/gamer/pull/60)。
+%我使用 C/CUDA 於 Linux 系統, 並使用 GPU/OpenMP/OpenMPI 平行化程式以加速運算。
+%這些工作都可增加 parallel programming 的經驗。我雖然非電資學院,
+%但我仍然旁聽資訊系的「系統程式設計」與「作業系統」, 以便縮短與電資學院學生的差距。
+
 
 \pagestyle{empty}
 
@@ -292,13 +323,9 @@
 	{preprint 2022}
         {}
 
-
-
-
 \section{Talks}
 \begin{itemize}
-\item
-          An adaptive-mesh, GPU-accelerated, and optimally error-controlled
+\item     An adaptive-mesh, GPU-accelerated, and optimally error-controlled
           special relativistic hydrodynamics code\\
           \begin{minipage}{6in}
        	  Oral (remote), American Center for Physics College Park, U.S.A
